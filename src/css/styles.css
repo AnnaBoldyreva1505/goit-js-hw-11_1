@@ -3,8 +3,87 @@
 }
 body {
   margin: 0;
-  background: #fdfaf2;
   padding-bottom: 30px;
+  background-color: rgb(11, 7, 30);
+  /* Firefox */
+  background-image: -moz-radial-gradient(
+      circle,
+      #ffffff 2px,
+      rgba(248, 255, 128, 0.5) 4px,
+      transparent 40px
+    ),
+    -moz-radial-gradient(circle, #ffffff 1px, rgba(255, 186, 170, 0.4) 3px, transparent
+          30px),
+    -moz-radial-gradient(ellipse, rgba(255, 255, 255, 0.9) 1px, rgba(
+            251,
+            255,
+            186,
+            0.3
+          )
+          2px, transparent 40px),
+    -moz-radial-gradient(ellipse, rgba(255, 255, 255, 0.4), rgba(
+            253,
+            255,
+            219,
+            0.2
+          )
+          1px, transparent 30px);
+  /* Webkit */
+  background-image: -webkit-gradient(
+      radial,
+      50% 50%,
+      2,
+      50% 50%,
+      40,
+      from(white),
+      color-stop(0.1, rgba(248, 255, 128, 0.5)),
+      to(transparent)
+    ),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(white), color-stop(0.1, rgba(255, 186, 170, 0.4)), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 40, from(rgba(255, 255, 255, 0.9)), color-stop(0.05, rgba(251, 255, 186, 0.3)), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(rgba(255, 255, 255, 0.4)), color-stop(0.03, rgba(253, 255, 219, 0.2)), to(transparent));
+  /* Background Attributes */
+  background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+  background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  /* Animation */
+  animation-name: movement;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* Firefox */
+  -moz-animation-name: movement;
+  -moz-animation-duration: 10s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  /* Webkit */
+  -webkit-animation-name: movement;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes movement {
+  from {
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  }
+  to {
+    background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+  }
+}
+@-moz-keyframes movement {
+  from {
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  }
+  to {
+    background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+  }
+}
+@-webkit-keyframes movement {
+  from {
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  }
+  to {
+    background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+  }
 }
 
 div {
@@ -15,14 +94,12 @@ form {
   width: 300px;
   margin: 0 auto;
 }
-.wrapper {
-  background: radial-gradient(#edf1cf, #43acb4);
-}
+
 .wrapper input {
   min-width: 300px;
   height: 42px;
   padding-left: 10px;
-  border: 2px solid #7ba7ab;
+  border: 2px solid #fefefe;
   border-radius: 5px;
   outline: none;
   background: #fffefb;
@@ -36,13 +113,13 @@ form {
   width: 42px;
   height: 42px;
   border: none;
-  background: #7ba7ab;
+  background: #b9b9bc;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
 .wrapper button:hover {
-  background: #6f9fa3;
+  background: #a6a6a6;
 }
 
 .wrapper button:before {
@@ -51,11 +128,9 @@ form {
   color: #f9f0da;
 }
 
-
-
 .photo-card {
-  background: #f9f0da;
-  color: #1d5459;
+  background: #ffffff;
+  color: #05051a;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   width: 330px;
@@ -63,7 +138,10 @@ form {
 }
 
 .photo-card:hover {
-  box-shadow: 0 4px 30px #fff;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  transform: scale(1.04);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery {
@@ -85,13 +163,13 @@ form {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  background: #7ba7ab;
+  background: #635c72;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px;
-  color: #f9f0da;
+  color: #fafafa;
 }
 
 .load-more:hover {
-  box-shadow: 0 5px 15px #7ba7ab;
+  box-shadow: 0 5px 15px #d1d3d3;
 }
