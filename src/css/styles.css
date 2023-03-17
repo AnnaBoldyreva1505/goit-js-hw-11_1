@@ -3,7 +3,10 @@
 }
 body {
   margin: 0;
+  background: #fdfaf2;
+  padding-bottom: 30px;
 }
+
 div {
   padding: 15px 0;
 }
@@ -13,7 +16,7 @@ form {
   margin: 0 auto;
 }
 .wrapper {
-  background: #13ffbc;
+  background: radial-gradient(#edf1cf, #43acb4);
 }
 .wrapper input {
   min-width: 300px;
@@ -46,4 +49,49 @@ form {
   content: '';
   font-size: 16px;
   color: #f9f0da;
+}
+
+
+
+.photo-card {
+  background: #f9f0da;
+  color: #1d5459;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 330px;
+  padding: 15px;
+}
+
+.photo-card:hover {
+  box-shadow: 0 4px 30px #fff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 1350px;
+  margin: 20px auto 20px;
+}
+
+.info {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.load-more {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background: #7ba7ab;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  color: #f9f0da;
+}
+
+.load-more:hover {
+  box-shadow: 0 5px 15px #7ba7ab;
 }
