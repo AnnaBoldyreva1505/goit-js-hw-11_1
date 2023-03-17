@@ -1,42 +1,49 @@
-* {box-sizing: border-box;}
-body{margin: 0;}
-div {padding: 15px 0}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+div {
+  padding: 15px 0;
+}
 form {
   position: relative;
   width: 300px;
   margin: 0 auto;
 }
-.wrapper {background: #A3D0C3;}
+.wrapper {
+  background: #13ffbc;
+}
 .wrapper input {
   min-width: 300px;
   height: 42px;
   padding-left: 10px;
-  border: 2px solid #7BA7AB;
+  border: 2px solid #7ba7ab;
   border-radius: 5px;
   outline: none;
   background: #fffefb;
-  color: #9E9C9C;
+  color: #9e9c9c;
 }
 
 .wrapper button {
-  position: absolute; 
+  position: absolute;
   top: 0;
   right: 0px;
   width: 42px;
   height: 42px;
   border: none;
-  background: #7BA7AB;
+  background: #7ba7ab;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
-
-.wrapper button:hover{
-    background: #6f9fa3; 
+.wrapper button:hover {
+  background: #6f9fa3;
 }
 
 .wrapper button:before {
-  content: "";
+  content: '';
   font-size: 16px;
-  color: #F9F0DA;
+  color: #f9f0da;
 }
